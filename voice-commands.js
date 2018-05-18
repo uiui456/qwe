@@ -170,7 +170,7 @@ export class VoiceCommands {
       const scenarios = [Scenario0, Scenario2, Scenario7]
 
       for (let k = 0; k < scenarios.length; k++) {
-        await this.successCallback(scenarios[k])
+        await setTimeout(async () => { await this.successCallback(scenarios[k]) }, 2000)
       }
     }
 
